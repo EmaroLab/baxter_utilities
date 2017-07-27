@@ -23,7 +23,7 @@ baxter_hostname="b2.local"
 
 # Set *Either* your computers ip address or hostname. Please note if using
 # your_hostname that this must be resolvable to Baxter.
-your_ip=`hostname -I`
+your_ip=`hostname -I | sed -e 's/[[:space:]]*$//'`
 #your_hostname="my_computer.local"
 
 # Specify ROS distribution (e.g. indigo, hydro, etc.)
